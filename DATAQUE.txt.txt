@@ -1,0 +1,19 @@
+-- Rename Table Name
+ALTER TABLE person RENAME  Faculty;
+-- Rename Column
+ALTER TABLE faculty CHANGE Phone Country carchar(225);
+-- create a new table
+CREATE TABLE employee(
+    
+    EmployeeID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    FirstName varchar(225) NOT NULL,
+    LastName varchar(225) NOT NULL,
+    City varchar(225) NOT NULL,
+    Phone varchar(225) 
+
+);
+
+-- MODIFY
+
+ALTER TABLE employee
+MOFIDY Phone varchar(11) NOT NULL
