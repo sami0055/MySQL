@@ -1,0 +1,29 @@
+https://paste.ofcode.org/37x3Nhir9zvvs9FAqq8cuXv
+
+-- Create A table Name Customer
+CREATE TABLE Customer(
+   CustomerId int NOT NULL,
+   Name varchar(225) NOT NULL,
+   Phone varchar(11) NOT NULL,
+    PRIMARY KEY(CustomerId)
+    
+
+);
+
+-- Creater A table Name Order
+
+CREATE TABLE Orders(
+   
+    OrderId int NOT NULL,
+    CustomerId int NOT NULL,
+    orderDate date NOT NULL,
+    OrderItem varchar(225) NOT NULL,
+    PRIMARY KEY(OrderId),
+    FOREIGN KEY(CustomerId) REFERENCES customer(customerId)
+);
+
+-- Inset data into orders tabel
+
+INSERT INTO orders(OrderId,CustomerId,orderDate,OrderItem)VALUES
+(100,213,'2023-04-06',"Pepsi"),
+(101,212,'2023-04-05',"Coca Cola");
